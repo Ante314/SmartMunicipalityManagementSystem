@@ -36,7 +36,7 @@ const users = [
     firstName: 'Jean',
     lastName: 'Martin',
     email: 'jean.martin@email.com',
-    password: 'user123',
+    password: 'user1234',
     role: 'citizen',
     bio: 'Habitant du quartier centre',
     location: 'Quartier Centre'
@@ -45,7 +45,7 @@ const users = [
     firstName: 'Sophie',
     lastName: 'Bernard',
     email: 'sophie.bernard@email.com',
-    password: 'user123',
+    password: 'user1234',
     role: 'citizen',
     bio: 'Passionnée de la vie locale',
     location: 'Quartier Nord'
@@ -54,7 +54,7 @@ const users = [
     firstName: 'Pierre',
     lastName: 'Dubois',
     email: 'pierre.dubois@email.com',
-    password: 'user123',
+    password: 'user1234',
     role: 'citizen',
     bio: 'Membre actif de la communauté',
     location: 'Quartier Sud'
@@ -264,10 +264,9 @@ async function seed () {
     console.log('\n👥 Création des utilisateurs...')
     const createdUsers = []
     for (const userData of users) {
-      const hashedPassword = await bcrypt.hash(userData.password, 10)
       const user = await User.create({
         ...userData,
-        password: hashedPassword,
+        password: userDatat.paswword,
         status: 'active'
       })
       createdUsers.push(user)
@@ -342,7 +341,7 @@ async function seed () {
     console.log('\n🔐 Comptes de test :')
     console.log('  Admin    : admin@smms.fr / admin123')
     console.log('  Staff    : marie.dupont@smms.fr / staff123')
-    console.log('  Citoyen  : jean.martin@email.com / user123')
+    console.log('  Citoyen  : jean.martin@email.com / user1234')
 
     console.log('\n✨ Vous pouvez maintenant démarrer l\'application !\n')
   } catch (error) {
