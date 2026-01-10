@@ -265,7 +265,7 @@ Après avoir exécuté `npm run seed`, vous pouvez utiliser ces comptes :
 |------|-------|--------------|
 | Admin | admin@smms.fr | admin123 |
 | Personnel | marie.dupont@smms.fr | staff123 |
-| Citoyen | jean.martin@email.com | user123 |
+| Citoyen | jean.martin@email.com | user1234 |
 
 ## 🛠️ Technologies
 
